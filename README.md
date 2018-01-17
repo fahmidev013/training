@@ -1,0 +1,1 @@
+Source code from tasks in training platforms like HackerRank and Codility.
