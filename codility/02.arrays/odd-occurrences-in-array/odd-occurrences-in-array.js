@@ -2,7 +2,7 @@ function solution(A) {
     var last;
     var paired = false;
     var arr = A.sort(function(a, b) {
-        return a -b;
+        return a - b;
     });
 
     for(var i = 0; i < arr.length; i++){
