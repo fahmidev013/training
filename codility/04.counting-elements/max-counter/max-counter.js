@@ -3,23 +3,16 @@ function solution(N, A) {
   var maxCounter = 0;
   var lastMaxCounter = 0;
 
-  function setCounters(value) {
-    for (var i = 0; i < N; ++i) {
-      counters[i] = value;
-    }
-  }
-
   // Initialize the counters
-  setCounters(0);
+  for (var i = 0; i < N; ++i) counters[i] = 0;
 
   // Consecutive operations
   for (var k = 0; k < A.length; ++k) {
-    var operation = A[k];
-    var x = operation - 1;
-    if (operation > N) {
+    var x = A[k] - 1;
+    if (A[k] > N) {
       // Max counter
       if (maxCounter > lastMaxCounter) {
-        setCounters(maxCounter);
+        for (var i = 0; i < N; ++i) counters[i] = maxCounter;
         lastMaxCounter = maxCounter;
       }
     } else {
